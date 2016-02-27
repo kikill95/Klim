@@ -1,16 +1,13 @@
 <ion-navbar *navbar>
-  <ion-title>
-    Home
-  </ion-title>
+    <ion-title>
+        List of Holograms
+    </ion-title>
 </ion-navbar>
 
 <ion-content class="home">
-  <ion-card>
-    <ion-card-header>
-      Card Header
-    </ion-card-header>
-    <ion-card-content>
-      Hello World
-    </ion-card-content>
-  </ion-card>
+    <ion-card *ngFor="#video of video.getVideos()">
+        <ion-card-header>
+            {{video.title}}
+        </ion-card-header>
+    </ion-card>
 </ion-content>
