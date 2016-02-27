@@ -1,13 +1,16 @@
 <ion-navbar *navbar>
     <ion-title>
-        List of Holograms
+        {{getVideo().title || 'Holograms'}}
     </ion-title>
 </ion-navbar>
 
 <ion-content class="home">
     <ion-card *ngFor="#video of video.getVideos()">
-        <ion-card-header>
+        <ion-card-header (click)="chooseVideo(video);">
             {{video.title}}
         </ion-card-header>
     </ion-card>
+    <div class="video-overlay">
+        <video src="{{getVideo().src}}" controls></video>
+    </div>
 </ion-content>
