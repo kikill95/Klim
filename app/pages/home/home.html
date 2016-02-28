@@ -11,7 +11,7 @@
         </ion-card-header>
     </ion-card>
     <div class="video-overlay" [hidden]="!getChosenVideo().title">
-        <ion-icon name="close" (click)="chooseVideo({});"></ion-icon>
+        <ion-icon name="close" (click)="chooseVideo({});" primary></ion-icon>
         <video src="{{getChosenVideo().src}}" controls></video>
     </div>
 </ion-content>
