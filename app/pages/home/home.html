@@ -1,6 +1,6 @@
 <ion-navbar *navbar>
     <ion-title>
-        {{getVideo().title || 'Holograms'}}
+        {{getChosenVideo().title || 'Holograms'}}
     </ion-title>
 </ion-navbar>
 
@@ -10,7 +10,8 @@
             {{video.title}}
         </ion-card-header>
     </ion-card>
-    <div class="video-overlay">
-        <video src="{{getVideo().src}}" controls></video>
+    <div class="video-overlay" [hidden]="!getChosenVideo().title">
+        <ion-icon name="close" (click)="chooseVideo({});"></ion-icon>
+        <video src="{{getChosenVideo().src}}" controls></video>
     </div>
 </ion-content>

@@ -6,6 +6,7 @@ import {VideoService} from '../../services/videos';
     providers: [VideoService]
 })
 export class HomePage {
+    chosenVideo: any;
     constructor(private video: VideoService) {
         this.chosenVideo = {
             title: null,
@@ -16,7 +17,7 @@ export class HomePage {
     chooseVideo(video) {
         this.chosenVideo = video;
     }
-    getVideo() {
+    getChosenVideo() {
         return this.chosenVideo;
     }
 }
