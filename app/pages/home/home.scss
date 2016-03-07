@@ -1,5 +1,10 @@
 .home {
   background-color: #00B0FF;
+  ion-card {
+    ion-card-header {
+      color: #616161;
+    }
+  }
   .video-overlay {
     height: calc(100% - 44px);
     width: 100%;

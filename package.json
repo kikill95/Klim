@@ -14,6 +14,17 @@
     "strip-sourcemap-loader": "0.0.1",
     "typescript": "1.7.5"
   },
-  "name": "hologramium",
-  "description": "Hologramium: An Ionic project"
+  "name": "Klim",
+  "description": "Klim: An Ionic project for visual holograms",
+  "cordovaPlugins": [
+    "cordova-plugin-device",
+    "cordova-plugin-console",
+    "cordova-plugin-whitelist",
+    "cordova-plugin-splashscreen",
+    "cordova-plugin-statusbar",
+    "ionic-plugin-keyboard"
+  ],
+  "cordovaPlatforms": [
+    "android"
+  ]
 }
