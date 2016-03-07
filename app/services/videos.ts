@@ -22,7 +22,7 @@ export class VideoService {
             },
             {
                 title: 'Cat',
-                src: 'vids/sat.mp4'
+                src: 'vids/cat.mp4'
             },
             {
                 title: 'Minions - Banana Song',
