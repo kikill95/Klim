@@ -1,16 +1,17 @@
 <ion-navbar *navbar>
-  <ion-title>
-    Home
-  </ion-title>
+    <ion-title>
+        {{getChosenVideo().title || 'Holograms'}}
+    </ion-title>
 </ion-navbar>
 
 <ion-content class="home">
-  <ion-card>
-    <ion-card-header>
-      Card Header
-    </ion-card-header>
-    <ion-card-content>
-      Hello World
-    </ion-card-content>
-  </ion-card>
+    <ion-card *ngFor="#video of video.getVideos()">
+        <ion-card-header (click)="chooseVideo(video);">
+            {{video.title}}
+        </ion-card-header>
+    </ion-card>
+    <div class="video-overlay" [hidden]="!getChosenVideo().title">
+        <ion-icon name="close" (click)="chooseVideo({});" primary></ion-icon>
+        <video src="{{getChosenVideo().src}}" controls></video>
+    </div>
 </ion-content>

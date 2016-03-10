@@ -8,3 +8,10 @@
 // App Shared Sass variables belong in app.variables.scss.
 
 @import '../pages/home/home';
+
+ion-title {
+  padding: 0 0 1px 0;
+  .toolbar-title {
+    color: #616161;
+  }
+}
